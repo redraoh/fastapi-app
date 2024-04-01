@@ -7,3 +7,4 @@ CREATE TABLE users
 
 INSERT INTO users VALUES(1, 'abc123', 'abc123@abc123.co.kr');
 INSERT INTO users VALUES(2, '987xyz', '987xyz@987xyz.co.kr');
+INSERT INTO users VALUES(3, 'webhook', 'webhook@test.co.kr');
