@@ -30,7 +30,8 @@ class User(Base):
 # 라우트 정의
 @app.get("/")
 def index():
-    return {"message": "Hello from FastAPI & Docker Compose test111111!!"}
+    current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return {"message": f"Hello from FastAPI & Docker Compose {current_datetime}!!"}
 
 @app.get("/users")
 def get_users():
