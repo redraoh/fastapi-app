@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('pre cleanup') {
             steps {
-                sh 'docker rm -f $(docker ps -qa)'
+                sh 'docker compose down -v'
             }
         }
         stage('git scm update') {
@@ -16,7 +16,6 @@ pipeline {
             steps {
             // sh 써줘야함
                 sh '''
-                docker compose down -v
                 docker compose up --build -d
                 '''
             }
