@@ -25,6 +25,7 @@ services:
      - "--mysqld.address=db:3306"    
     depends_on:
       - db
+      
   web:
     image: redraoh/fawebapp
     build: web
